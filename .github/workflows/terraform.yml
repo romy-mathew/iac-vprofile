@@ -33,6 +33,9 @@ jobs:
 
       - name: Setup Terraform with specified version on the runner
         uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.6.3
+
 
       - name: Terraform init
         id: init
@@ -42,7 +45,7 @@ jobs:
         id: fmt 
         run: terraform fmt -check
 
-      - name: Terafform validate
+      - name: Terraform validate
         id: validate
         run: terraform validate
 
