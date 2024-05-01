@@ -19,7 +19,7 @@ env:
   # S3 bucket for the Terraform state file
   BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
 
-jobs:
+ jbs:
   terraform:
     name: "Apply Terraform code"
     runs-on: ubuntu-latest
